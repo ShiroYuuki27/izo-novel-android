@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IzoNovel">
         <activity
+            android:name=".DaftarNovelActivity"
+            android:exported="false" />
+        <activity
             android:name=".FormInptActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,12 +24,10 @@
         <activity
             android:name=".SplashActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
         <activity
             android:name=".BiodataActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".RegisterActivity"
             android:exported="true"

@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     LinearLayout menuInfoPengguna;
+    LinearLayout novelfavorite;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +20,15 @@ public class MainActivity extends AppCompatActivity {
 
         menuInfoPengguna = findViewById(R.id.informasi_pengguna);
         menuInfoPengguna.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                Intent intent = new Intent(MainActivity.this, BiodataActivity.class);
+                startActivity(intent);
+                return false;
+            }
+        });
+        novelfavorite = findViewById(R.id.novelfavorite);
+        novelfavorite.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 Intent intent = new Intent(MainActivity.this, BiodataActivity.class);

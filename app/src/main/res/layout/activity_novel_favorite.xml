@@ -79,7 +79,7 @@
                     android:layout_width="100dp"
                     android:layout_height="130dp"
                     android:layout_marginTop="5dp"
-                    android:src="@drawable/Emilia">
+                    android:src="@drawable/emilia">
                 </ImageView>
 
                 <TextView
@@ -179,6 +179,8 @@
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/daftarfavorite"
+            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="140dp"
             android:layout_marginTop="-240dp"
@@ -189,10 +191,11 @@
             android:paddingLeft="11dp"
             android:paddingRight="11dp">
             <ImageView
+
                 android:layout_width="100dp"
                 android:layout_height="130dp"
                 android:layout_marginTop="5dp"
-                android:src="@drawable/Emilia">
+                android:src="@drawable/emilia">
             </ImageView>
 
             <TextView

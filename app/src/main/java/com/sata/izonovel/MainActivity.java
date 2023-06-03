@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         novelfavorite.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                Intent intent = new Intent(MainActivity.this, BiodataActivity.class);
+                Intent intent = new Intent(MainActivity.this, DetailNovelActivity.class);
                 startActivity(intent);
                 return false;
             }

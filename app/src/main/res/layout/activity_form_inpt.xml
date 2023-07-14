@@ -70,7 +70,7 @@
                 android:hint="Genre"
                 android:orientation="horizontal">
                 <AutoCompleteTextView
-                    android:id="@+id/filled_exposed_dropdown"
+                    android:id="@+id/act_genre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="none"/>
@@ -78,7 +78,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
                 android:layout_marginTop="10dp"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:hint="Sinopsis">
@@ -89,7 +89,15 @@
                     android:gravity="top|start"
                     android:id="@+id/met_sinopsis"/>
             </com.google.android.material.textfield.TextInputLayout>
+            <Button android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="simpan"
+                android:id="@+id/save_novel"/>
+
         </LinearLayout>
+
     </ScrollView>
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,6 +1,9 @@
 package com.sata.izonovel.Retrofit;
 
+import com.sata.izonovel.Model.InsertNovelModel;
 import com.sata.izonovel.Model.InsertResponseModel;
+import com.sata.izonovel.Model.ListNovelRequestModel;
+import com.sata.izonovel.Model.ListNovelResponseModel;
 import com.sata.izonovel.Model.LoginRequestModel;
 import com.sata.izonovel.Model.LoginResponseModel;
 import com.sata.izonovel.Model.RegisterRequestModel;
@@ -21,6 +24,15 @@ public interface ApiEndpoint
     @Headers({"api-key:" + API_KEY, "Content-Type:application/json"})
     @POST("app/data-yvczw/endpoint/data/v1/action/findOne")
     Call<LoginResponseModel> onSubmitLogin(@Body LoginRequestModel loginRequestModel);
+
+    @Headers({"api-key:" + API_KEY, "Content-Type:application/json"})
+    @POST("app/data-yvczw/endpoint/data/v1/action/insertOne")
+    Call<InsertResponseModel> insertNovel(@Body InsertNovelModel insertNovelModel);
+
+
+    @Headers({"api-key:" + API_KEY, "Content-Type:application/json"})
+    @POST("app/data-yvczw/endpoint/data/v1/action/find")
+    Call<ListNovelResponseModel> litDaftarNovel(@Body ListNovelRequestModel listNovelRequestModel);
 
 
 

@@ -6,13 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    LinearLayout menuInfoPengguna;
-    LinearLayout novelfavorite;
-
+    TextView menuFavorite, menuInfoPengguna, menuDaftarNovel, menuInputNovel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,14 +27,36 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-        novelfavorite = findViewById(R.id.novelfavorite);
-        novelfavorite.setOnTouchListener(new View.OnTouchListener() {
+
+        menuFavorite = findViewById(R.id.favorite_more);
+        menuFavorite.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                Intent intent = new Intent(MainActivity.this, DetailNovelActivity.class);
+            public boolean onTouch(View v, MotionEvent event) {
+                Intent intent = new Intent(MainActivity.this, NovelFavoriteActivity.class);
                 startActivity(intent);
                 return false;
             }
         });
+
+        menuDaftarNovel = findViewById(R.id.daftar_novel);
+        menuDaftarNovel.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                Intent intent = new Intent(MainActivity.this, DaftarNovelActivity.class);
+                startActivity(intent);
+                return false;
+            }
+        });
+
+        menuInputNovel = findViewById(R.id.tvInputNovel);
+        menuInputNovel.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                Intent intent = new Intent(MainActivity.this, FormInptActivity.class);
+                startActivity(intent);
+                return false;
+            }
+        });
+
     }
 }
